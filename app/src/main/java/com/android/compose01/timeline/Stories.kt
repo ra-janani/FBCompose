@@ -22,8 +22,9 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
+import coil.compose.rememberAsyncImagePainter
 import com.android.compose01.R
-import dev.chrisbanes.accompanist.coil.CoilImage
+
 
 
 @Composable
@@ -77,8 +78,8 @@ fun StoryCard(story: Story) {
 
             val (profileImg, storyImg, name) = createRefs()
 
-            CoilImage(
-                data = story.imgUrl,
+            Image(
+                painter = rememberAsyncImagePainter(model = story.imgUrl),
                 contentDescription = null,
                 modifier = Modifier.constrainAs(storyImg) {
                     linkTo(parent.start, parent.end)

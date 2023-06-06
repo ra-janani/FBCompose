@@ -16,7 +16,8 @@
         <activity
             android:name=".timeline.TimelineActivity"
             android:label="@string/title_activity_timeline"
-            android:theme="@style/Theme.Compose01.NoActionBar">
+            android:theme="@style/Theme.Compose01.NoActionBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
